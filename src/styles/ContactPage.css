@@ -1,0 +1,29 @@
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 500px;
+    height: 700px;
+    align-items: center;
+    /* background-color: rgba(154, 127, 54, 0.4); */
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+    border-radius: 20px;
+    overflow-y: auto;
+}
+
+
+
+.form-segment {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    gap: 20px;
+}
+
+.form-input {
+    display: flex;
+    width: 90%;
+    gap: 5px;
+}

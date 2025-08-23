@@ -1,0 +1,27 @@
+.portfolio-page {
+    margin-top: 150px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Ensures exactly 4 columns */
+    gap: 20px;
+    padding: 10px;
+    justify-content: center;
+    /* Centers the grid */
+    overflow-y: hidden;
+    margin-top: 5px;
+}
+
+.project-card {
+    display: flex;
+    height: 250px;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
