@@ -7,7 +7,7 @@
     outline-style: solid;
     outline-width: 2px;
     outline-color: rgba(255, 255, 255, 0.3);
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(176, 137, 104, 0.6);
     backdrop-filter: blur(10px) brightness(0.7);
     padding: 1px 20px;
     z-index: 1000;
@@ -97,13 +97,13 @@
 }
 
 .contact-button {
-    background-color: rgba(154, 127, 54, 0.4);
+    background-color: rgba(90, 62, 54, 0.4);
     border-radius: 10px;
 }
 
 .contact-button:hover {
     animation: colorSwitch ease-in-out 0.5s;
-    background-color: rgba(252, 196, 40, 0.4);
+    background-color: #fcc42866;
 }
 
 @keyframes colorSwitch {

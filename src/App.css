@@ -10,6 +10,8 @@
   overflow-x: hidden;
   justify-content: center;
   gap: 200px;
+  background-color: rgba(253, 246, 236, 0.7);
+
 }
 
 .dummy {
