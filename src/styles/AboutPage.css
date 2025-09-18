@@ -1,7 +1,16 @@
 .about-page {
     margin-top: 150px;
     width: 70vw;
+    background: linear-gradient(90deg, #be916b, #c5a288ed);
+    -webkit-background-clip: text;
+    /* Safari/Chrome */
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* Standard */
+    color: transparent;
 }
+
+
 
 .about-body {
     border-radius: 15px;
@@ -14,12 +23,30 @@
 
 .about-image {
     height: 500px;
-    width: 500px;
+    width: 90%;
     border-radius: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .about-text {
     height: 500px;
-    width: 700px;
+    width: 90%;
+}
+
+@media(max-width:1000px) {
+
+    .about-body {
+        flex-direction: row-reverse;
+
+    }
+
+    .about-text {
+        width: 99%;
+        height: 20rem;
+    }
+
+    .about-image {
+        width: 99%;
+        height: 20rem;
+    }
 }
