@@ -6,24 +6,28 @@ function Navbar() {
 
     const toggleSidebar = () => setIsOpen(!isOpen);
 
+    const navbarBackground = ()=>{
+        const navbar = document.querySelector('.navbar');
+        if(!navbar) return ()=>{};
+
+        const observer = new IntersectionObserver((entries)=>{entries.forEach((entry)=>{
+
+            if(entry.isIntersecting){
+                navbar.classList.remove('scrolled')
+            }
+            else{
+                navbar.classList.add('scrolled')
+            }
+        })},{threshold:0.7})
+        const homepage = document.querySelector('.home-page')
+        if(!homepage) return ()=>{};
+        observer.observe(homepage)
+        return ()=>{observer.disconnect()}
+    }
 
     useEffect(() => {
-        const onScroll = () => {
-            const navbar = document.querySelector('.navbar');
-            if(!navbar) return;
-    
-            const scrollY = window.scrollY;
-            const trigger = window.innerHeight * 0.7; // 70vh
-    
-            if(scrollY > trigger) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        };
-    
-        window.addEventListener('scroll', onScroll);
-        return () => window.removeEventListener('scroll', onScroll);
+
+        navbarBackground();
     }, []);
     return (
         <>

@@ -3,6 +3,7 @@ import './App.css'
 
 import AboutPage from './components/AboutPage'
 import ContactPage from './components/ContactPage'
+import HomePage from './components/HomePage'
 import Navbar from './components/Navbar'
 import Portfolio from './components/Portfolio'
 
@@ -13,7 +14,7 @@ function App() {
     <div className="main-container">
       <Navbar />
       <section className="page-content" id="homepage">
-        {/* <div className="dummy" /> */}
+        <HomePage/>
       </section>
       <section className="page-content" id="about">
         <AboutPage />
