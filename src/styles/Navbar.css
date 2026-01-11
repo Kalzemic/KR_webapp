@@ -183,6 +183,18 @@
     text-decoration: none;
 }
 
+.business-theme-button{
+    border-end-end-radius: 0px;
+    border-start-end-radius: 0px;
+}
+
+.events-theme-button{
+    color: rgba(90, 62, 54, 0.6);
+    background-color:rgba(253, 246, 236, 0.9) ;
+    border-end-start-radius: 0px;
+    border-start-start-radius: 0px;
+}
+
 @media (max-width: 768px) {
     .desktop-menu {
         display: none;
@@ -191,4 +203,8 @@
     .hamburger-menu {
         display: block;
     }
+    
 }
+
+
+

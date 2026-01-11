@@ -1,0 +1,50 @@
+
+
+
+.intro-page{
+    
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:99.9vw;
+    background-color: black;
+    height:99.9vh;
+
+
+}
+
+
+.intro-video{
+    z-index:0;
+    object-fit: cover;
+    filter: blur(2px);
+    height:80%;
+    width:50%;
+}
+
+.business-button{
+    z-index:1;
+    position: absolute;
+    bottom:30%;
+    left:70vw;
+}
+
+.events-button{    
+    z-index:1;
+    position: absolute;
+    bottom:30%;
+    left:21vw;
+    color: rgba(90, 62, 54, 0.6);
+    background-color:  rgba(253, 246, 236, 0.9);
+}
+
+
+@media(max-width:1000px){
+    .business-button{
+        left:60vw;
+    }
+    .events-button{
+        left:8vw;
+    }
+}

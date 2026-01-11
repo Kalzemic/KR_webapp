@@ -1,10 +1,12 @@
 import '../styles/Navbar.css'
 import { useEffect, useState } from 'react';
+import { useTheme } from './ThemContext';
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleSidebar = () => setIsOpen(!isOpen);
+    const {setTheme} = useTheme();
 
     const navbarBackground = ()=>{
         const navbar = document.querySelector('.navbar');
@@ -46,7 +48,10 @@ function Navbar() {
                             <li className="contact-button"><a href="#contact">צרו קשר</a></li>
                         </ul>
                     </div>
-
+                    <div className='theme-toggle'>
+                    <button className='business-theme-button' onClick={()=>setTheme('business')}>עסקים</button>
+                    <button className='events-theme-button' onClick={()=>setTheme('events')}>אירועים</button>
+                    </div>
                     {/* Mobile menu button */}
                     <div className="hamburger-menu" onClick={toggleSidebar}>
                         ☰
