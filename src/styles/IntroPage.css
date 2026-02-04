@@ -10,18 +10,59 @@
     width:99.9vw;
     background-color: black;
     height:99.9vh;
+    gap:5px;
 
 
 }
 
+.intro-header{
+    position:absolute;
+    display:flex;
+    flex-direction: column-reverse;
+    justify-content: right;
+    align-items: center;
+    height:150px;
+    z-index:1;
+    top:0;
+    width:100%;
+    background-color: rgba(0, 0, 0, 0.758);
+    box-shadow: 0 0 100px  rgb(0, 0, 0);
+}
+.intro-title{
+    margin-top:3rem;
+   
+}
+.intro-logo{
+    position:absolute;
+    z-index: 1;
+    height:20rem;
+    width:15rem;
+    border-radius:300px;
+    inset: 0;
+    margin: auto;
+    outline-style: solid;
+    outline-width: 4px;
+    outline-color: rgba(255, 255, 255, 1);
+}
+
+.intro-video-container{
+    height:100%;
+    width:50%;
+    outline-style: solid;
+    outline-width: 5px;
+    outline-color: rgba(255, 255, 255, 1);
+}
 
 .intro-video{
     z-index:0;
     object-fit: cover;
-    filter: blur(2px) brightness(1);
-    height:99%;
-    width:50%;
+    inset: 0;
+    margin: auto;
+    filter: blur(1px) brightness(1);
+    height:100%;
+    width:100%;
     transition: filter 0.3s ease;
+    
 }
 
 
@@ -31,9 +72,23 @@
     position: absolute;
     bottom:29%;
     left:70vw;
+    color: #a5d8ff ;
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0);
+    transition: box-shadow 0.2s ease-in-out;
+    background-color: #0d1b2a;
+    border-radius: 23px;
+}
+
+
+.business-button:hover {
+    box-shadow: 0 0 0 3px #60a5fa;
+}
+
+.intro-video:hover{
+    filter: blur(2px) brightness(0.2); 
 }
 .intro-page:has(.business-button:hover) #business-video {
-    filter: blur(2px) brightness(0.4);  
+    filter: blur(2px) brightness(0.2);  
 }
 .events-button{    
     z-index:1;
@@ -41,9 +96,20 @@
     position: absolute;
     bottom:30%;
     left:21vw;
-    color: rgba(90, 62, 54, 0.6);
-    background-color:  rgba(253, 246, 236, 0.9);
+    color: #3d1f15;
+    background-color: rgba(215, 195, 170, 0.95);
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0);
+    transition: box-shadow 0.2s ease-in-out;
+    border-radius: 23px;
 }
+
+
+
+.events-button:hover {
+    box-shadow: 0 0 0 3px #8b5a3c;
+}
+
+
 .intro-page:has(.events-button:hover) #events-video {
     filter: blur(2px) brightness(0.4);
 }
@@ -52,15 +118,21 @@
     .intro-page{
         flex-direction: column;
     }
-    .intro-video{
+
+    .intro-logo{
+        height:7rem;
+        width:4rem;
+        outline-width: 3px;
+    }
+    .intro-video-container{
         width:100%;
     }
     .business-button{
-        top:40vh;
+        top:25vh;
         left:32vw;
     }
     .events-button{
-        top:90vh;
+        top:75vh;
         left:32vw;
     }
 }

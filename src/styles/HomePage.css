@@ -4,6 +4,20 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    height:90vh;
+    height:80vh;
+    width:100vw;
+}
+
+
+
+.home-video{
+    z-index:0;
+    object-fit: contain;
+    inset: 0;
+    margin: auto;
+    filter: blur(1px) brightness(1);
+    height:100%;
     width:100%;
+    transition: filter 0.3s ease;
+    
 }

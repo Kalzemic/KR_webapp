@@ -11,9 +11,22 @@
     justify-content: center;
     gap: 200px;
     background-color: rgba(253, 246, 236, 0.7);
+
+    transition:
+    background 0.5s ease,
+    backdrop-filter 0.5s ease,
+    opacity 0.5s ease,
+    transform 0.5s ease;
   
   }
+  .main-container.events{
+    color: #3d1f15;
+    background-color: var(--events-background);
+  }
   
+  .main-container.business{
+    background-color: var(--business-background);
+  }
   .dummy {
     height: 99vh;
     width: 99%;

@@ -1,13 +1,36 @@
 import '../styles/Navbar.css'
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTheme } from './ThemContext';
 
 function Navbar() {
+
+
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleSidebar = () => setIsOpen(!isOpen);
-    const {setTheme} = useTheme();
+    const {theme, setTheme} = useTheme();
+    const prevThemeRef = useRef<String | null>(null);
+    const containerRef = useRef<HTMLDivElement | null>(null);
 
+
+
+    useEffect(()=>{
+
+            if (containerRef.current) {
+              containerRef.current.classList.remove(`${prevThemeRef.current}`)
+              
+              containerRef.current.classList.add(`${theme}`);
+              
+              
+              const elements = containerRef.current.querySelectorAll('*');
+              elements.forEach(el => {
+                el.classList.remove(`${prevThemeRef.current}`)
+                el.classList.add(`${theme}`)
+            });
+              prevThemeRef.current = theme
+            }
+        }
+    ,[theme])
     const navbarBackground = ()=>{
         const navbar = document.querySelector('.navbar');
         if(!navbar) return ()=>{};
@@ -33,10 +56,10 @@ function Navbar() {
     }, []);
     return (
         <>
-            <nav className="navbar">
+            <nav className="navbar" ref={containerRef}>
                 <div className="navbar-content">
                     <div className="navbar-left">
-                        <img src="minimal_body_logo.png" alt="Company Logo" className="logo" />
+                        <img src="/logo/kr_logo.jpeg" alt="Company Logo" className="logo" />
                     </div>
 
                     {/* Desktop nav */}

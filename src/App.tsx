@@ -9,12 +9,12 @@ import MainDisplay from './components/MainDisplay'
 import IntroPage from './components/IntroPage'
 
 function App() {
-
+  
 
   return (
     <ThemeProvider>
       <BrowserRouter>
-      <Routes>
+      <Routes >
         <Route path='' element={<IntroPage/>}/>
         <Route path='display' element={<MainDisplay/>}/>
       </Routes>

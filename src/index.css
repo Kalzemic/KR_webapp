@@ -8,7 +8,9 @@
   font-family: 'Secular One';
   line-height: 1.5;
   font-weight: 400;
-
+  /*theme variables*/
+  --business-background: #05090e;
+  --events-background: rgba(179, 152, 118, 0.82);
   color-scheme: light dark;
   color: rgba(90, 62, 54, 0.4);
   background-color: #242424;
@@ -67,6 +69,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  color: rgba(245, 223, 217, 0.712)
 }
 
 h1 {
@@ -86,10 +89,6 @@ button {
   transition: transform 0.7s ease;
 }
 
-button:hover {
-  transform: scale(1.1);
-
-}
 
 button:focus,
 button:focus-visible {

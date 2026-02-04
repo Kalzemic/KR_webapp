@@ -13,7 +13,10 @@ type ThemeContextType = {
 
 export function ThemeProvider({children}:{children: ReactNode}){
 
-    const [theme, setTheme] = useState('')
+    const [theme, setTheme] = useState<string>(() => {
+        return (localStorage.getItem("theme") as "events" | "business") || "events";
+      });
+      
     
     return (
         <ThemeContext.Provider value={{theme, setTheme}}>

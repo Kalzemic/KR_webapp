@@ -5,38 +5,50 @@ import { Button } from "./ui/button"
 
 
 
+
 export default function IntroPage(){
 
     
 
 
 
-
     const navigate = useNavigate()
     const {setTheme} = useTheme()
+
+
+
     return(
         <div className='intro-page'>
-
-            <Button className='business-button' 
+            {/* <div className='intro-header'>
+                
+                <div className='intro-title'>
+                <h1 >KR MOMENTS</h1>
+                </div>
+            </div> */}
+            <img className='intro-logo' src='/logo/kr_logo.jpeg'/>
+            <Button variant='default' className='business-button' 
                 onClick={()=>{setTheme('business'); navigate('/display')}}>
-                לתוכן עסקים
+                צילומי עסקים
             </Button>
+            <div className='intro-video-container'>
             <video id='business-video' className='intro-video' autoPlay loop muted playsInline
             onLoadedData={(e) => e.currentTarget.playbackRate = 0.99}
             >
                 <source  src="/intro/business.mp4" type="video/mp4" 
                 />
             </video>
-            <Button className='events-button' 
+            </div>
+            <Button variant='default'  className='events-button' 
                 onClick={()=>{setTheme('events'); navigate('/display')}}>
-                לתוכן אירועים
+                צילומי אירועים
             </Button>
 
+            <div className='intro-video-container'>
             <video id='events-video' className='intro-video' autoPlay loop muted playsInline
-            onClick={()=>{setTheme('events'); navigate('/display')}}
             >
                 <source src="/intro/events.mp4" type="video/mp4"/>
             </video>
+            </div>
 
         </div>
     )

@@ -1,12 +1,13 @@
 .navbar {
     position: fixed;
-    top: 2%;
+    top: 1%;
     /* right: 10%; */
     width: 80%;
-    height: 80px;
-    background-color: rgba(0,0,0,0);
+    height: 100px;
+    background-color: none;
     padding: 1px 20px;
     z-index: 1000;
+    
     border-radius: 15px;
     opacity: 0;
     animation: fadeIn 0.8s ease-in 1.2s forwards;
@@ -17,14 +18,31 @@
         backdrop-filter 0.5s ease,
         opacity 0.5s ease,
         transform 0.5s ease;
+    
 }
 
 .navbar.scrolled{
     outline-style: solid;
     outline-width: 2px;
-    outline-color: rgba(255, 255, 255, 0.3);
-    background-color: rgba(176, 137, 104, 0.6);
+    outline-color: rgba(248, 229, 229, 0.689);
     backdrop-filter: blur(10px) brightness(0.7);
+    overlay: blur(1px);
+}
+.navbar.events a{
+    color: #3d1f15;
+}
+.navbar.business a{
+    color:#a5d8ff ;
+}
+
+
+.navbar.scrolled.events{
+    background-color: rgba(176, 137, 104, 0.6);
+}
+
+.navbar.scrolled.business{
+    background-color: #60a5fa9e;
+    
 }
 
 .navbar-content {
@@ -34,12 +52,13 @@
     height: 100%;
     position: relative;
     padding: 0 16px;
+    
 }
 
 /* Center the UL using absolute positioning trick */
 .navbar-center {
     position: absolute;
-
+    text-align: center;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -68,10 +87,14 @@
 
 .navbar-left .logo {
     height: 80px;
-    object-fit: contain;
+    width:80px;
+    object-fit: cover;
     /* margin-left: 10px;
     margin-bottom: 80px; */
-    border-radius: 200px;
+    border-radius: 50px;
+    outline-style: solid;
+    outline-width: 1px;
+    outline-color: rgba(255, 255, 255, 1);
 
 }
 
@@ -91,19 +114,34 @@
 
 
 .navbar a {
-    color: rgb(255, 255, 255);
+    /* color: rgb(255, 255, 255); */
     text-decoration: none;
     font-size: 18px;
     font-family: 'Secular One';
     display: inline-block;
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
     padding: 10px 15px;
+    outline-style: solid;
+    
+    width:130px;
+    justify-content: center;
+    align-items: center;
+    outline-width: 2px;
+    border-radius: 10px;
+    outline-color: rgba(255, 255, 255, 0.3);
 }
 
-.navbar a:hover {
-    transform: scale(1.2);
+
+.navbar.events a:hover {
+    background-color:var(--events-background)
 
 }
+
+.navbar.business a:hover {
+    background-color:var(--business-background)
+
+}
+
 
 .contact-button {
     background-color: rgba(90, 62, 54, 0.4);
@@ -142,7 +180,7 @@
     display: none;
     font-size: 32px;
     cursor: pointer;
-    color: white;
+
     padding: 10px;
 }
 
@@ -178,19 +216,21 @@
 }
 
 .sidebar a {
-    color: white;
+   
     font-size: 20px;
     text-decoration: none;
 }
 
 .business-theme-button{
+    color:#a5d8ff ;
+    background-color: #0d1b2a;
     border-end-end-radius: 0px;
     border-start-end-radius: 0px;
 }
 
 .events-theme-button{
-    color: rgba(90, 62, 54, 0.6);
-    background-color:rgba(253, 246, 236, 0.9) ;
+    color: #3d1f15;
+    background-color: rgba(179, 152, 118, 0.82) ;
     border-end-start-radius: 0px;
     border-start-start-radius: 0px;
 }
