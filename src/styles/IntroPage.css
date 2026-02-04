@@ -18,33 +18,49 @@
 .intro-video{
     z-index:0;
     object-fit: cover;
-    filter: blur(2px);
-    height:80%;
+    filter: blur(2px) brightness(1);
+    height:99%;
     width:50%;
+    transition: filter 0.3s ease;
 }
+
 
 .business-button{
     z-index:1;
+    height:60px;
     position: absolute;
-    bottom:30%;
+    bottom:29%;
     left:70vw;
 }
-
+.intro-page:has(.business-button:hover) #business-video {
+    filter: blur(2px) brightness(0.4);  
+}
 .events-button{    
     z-index:1;
+    height:60px;
     position: absolute;
     bottom:30%;
     left:21vw;
     color: rgba(90, 62, 54, 0.6);
     background-color:  rgba(253, 246, 236, 0.9);
 }
-
-
+.intro-page:has(.events-button:hover) #events-video {
+    filter: blur(2px) brightness(0.4);
+}
 @media(max-width:1000px){
+
+    .intro-page{
+        flex-direction: column;
+    }
+    .intro-video{
+        width:100%;
+    }
     .business-button{
-        left:60vw;
+        top:40vh;
+        left:32vw;
     }
     .events-button{
-        left:8vw;
+        top:90vh;
+        left:32vw;
     }
 }
